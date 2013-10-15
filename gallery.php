@@ -5,7 +5,7 @@
 			<?php get_template_part('highlight') ?>
 			<?php $id = 1; get_template_part('tile-large') ?><!--
 			--><div class="lien" id="portfolio">
-					<a href="portfolio.html">Portfolio</a>
+					<a href="portfolio">Portfolio</a>
 				</div><!--
 			--><?php $id=2; get_template_part('tile-normal');?><!--
 			--><?php $id = 3; get_template_part('tile-large') ?><!--

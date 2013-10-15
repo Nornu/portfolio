@@ -11,6 +11,6 @@ $the_query = new WP_Query( array('post_type' => 'post') );
 	<?php get_template_part('blog'); ?>
 	<?php get_template_part('moi') ?>
 <?php 
-//var_dump($id);
+//var_dump($recent_posts[0]);
 get_footer(); 
 ?>
