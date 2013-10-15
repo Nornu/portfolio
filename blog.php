@@ -8,7 +8,7 @@ $the_query = new WP_Query( array('post_type' => 'post') );
 			<a class="black article" href=" <?php echo $last_post[0]['post_name'] ?> " title="cliquez sur l'article pour lire la suite de <?php echo $last_post[0]['post_title']?>">
 				<?php if (has_post_thumbnail()) :?>
 					<div class="image">
-						<?php echo the_post_thumbnail( array(170,170))?>
+						<?php echo get_the_post_thumbnail($last_post[0]['ID'], array(170,170))?>
 					</div><!--
 				--><?php endif;?><!--
 				--><div class="cadre">
