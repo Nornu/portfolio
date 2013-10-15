@@ -161,7 +161,7 @@
 		float:right;
 		position: relative;
 	}
-	figure:hover,.lien:hover,img:hover,.blog .cadre:hover{
+	figure:hover,.lien:hover,.article:hover{
 		box-shadow: 0 0 5px black;
 		position: relative;
 		z-index:10;
@@ -218,6 +218,10 @@
 			display:inline-block;
 			vertical-align: bottom;
 		}
+	}
+	.article{
+		display: inline-block;
+		vertical-align: bottom;
 	}
 	.lien{
 		display: inline-block;
