@@ -10,9 +10,6 @@ $the_query = new WP_Query( array('post_type' => 'post') );
 	<?php get_template_part('gallery') ?>
 	<?php get_template_part('blog'); ?>
 	<?php get_template_part('moi') ?>
-	<footer>
-		Accès direct au réseaux sociaux
-	</footer>
 <?php 
 //var_dump($recent_posts[0]);
 get_footer(); 

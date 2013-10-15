@@ -120,6 +120,34 @@
 .black{
 	color:black;
 }
+.socials{
+	margin:0 10px;
+}
+.socials span{
+	display: inline-block;
+	text-indent: -9999px;
+	margin:0 10px 0 -10px;
+}
+.socials:before{
+	text-align: center;
+	font-family: "fontello";
+	content: "";
+}
+#fb:before{
+	content:"\e809"
+}
+#tw:before{
+	content:"\e807"
+}
+#in:before{
+	content:"\e805"
+}
+#git:before{
+	content:"\e808"
+}
+#gplus:before{
+	content:"\e804"
+}
 @media (max-width: 680px) {
 	.lien,figcaption{
 		max-width: 140px;
