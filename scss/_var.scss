@@ -1,0 +1,24 @@
+//Colors
+
+$red : rgb(212,64,64);
+$blue : rgb(20,171,227);
+$green :rgb(119,154,77);
+$white : rgb(244,246,232);
+$black : rgb(63,64,64);
+
+//Fonts
+
+$fontPara : Corbel, "Lucida Sans Unicode", "Lucida Grade", "Bitstream Vera Sans", "Luxi Serif", Verdana, sans-serif;
+$fontTitle : "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-serif;
+
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?26069116');
+  src: url('./font/fontello.eot?26069116#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff?26069116') format('woff'),
+       url('./font/fontello.ttf?26069116') format('truetype'),
+       url('./font/fontello.svg?26069116#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,238 @@
+@import "compass/reset";
+@import "compass";
+@import "var";
+
+//Les Bases
+
+	html{
+		background: url('./img/fond.png') 50% 0 fixed;
+		font : 16px/1.5 $fontPara;
+	}
+	body{
+		opacity: 50%;
+		margin:0 auto;
+	}
+	h1,h2{
+		position: absolute;
+		left:-9999px;
+	}
+	header{
+		color:white;
+		font-weight: 800;
+		font-size: 2.2em;
+		background-color: $green;
+		width:140px;
+		height:145px;
+		text-align: right;
+		margin-bottom: 5px;
+		padding:10px;
+		span:before{
+			content:"";
+			display: inline-block;
+			width:24px;
+			height:86px;
+			padding:0 7px;
+			background: url('./img/carrotB.png') no-repeat;
+			background-size: contain;
+		}
+	}
+	section{
+		text-align: right;
+	}
+	a{
+		color:white;
+		text-decoration: none;
+	}
+	img,figure{
+		vertical-align: bottom;
+	}
+	footer{
+		visibility: hidden;
+	}
+
+//Les classes
+
+.title{
+	font-family : $fontTitle;
+}
+.introduction{
+	font-size: 1.4em;
+	color:white;
+	text-align: right;
+	margin:5px;
+	text-shadow:1px 1px 5px lighten(black,10);
+	strong{
+		font-size: 1.5em;
+		display: block;
+	}
+}
+.lien{
+	background-color: $green;
+	width:150px;
+	height:150px;
+	padding:10px;
+	text-align: center;
+	color:white;
+	font-size: 1.3em;
+	a{
+		display: block;
+		width:150px;
+		height:115px;
+		padding-top:35px;
+	}
+	a:before{
+		font-family: "fontello";
+		content: "";
+		display: block;
+		width: 70px;
+		height: 70px;
+		font-size: 2.2em;
+		margin: auto;
+		text-align: center;
+	}
+}
+#portfolio a:before{
+  content:"\e801";
+}
+#contact a:before{
+  content:"\e800";
+}
+#blog a:before{
+  content:"\e802";
+}
+#moi a:before{
+  content:"\e803";
+}
+.cadre{
+	background-color: $white;
+	vertical-align: top;
+	max-width:320px;
+	height:150px;
+	padding:10px;
+	overflow: hidden;
+	span{
+		display: block;
+	}
+}
+.highlight{
+	width:340px;
+}
+.black{
+	color:black;
+}
+@media (max-width: 680px) {
+	.lien,figcaption{
+		max-width: 140px;
+		max-height: 140px;
+		display: inline-block;
+	}
+	img{max-width: 160px;}
+	#contact{
+		display:none;		
+	}
+	
+}
+@media (min-width: 681px) {
+	body{
+		padding:50px 150px 0 0px;
+	}
+	header{
+		position: fixed;
+		z-index:20;
+		right:0;
+		top:0;
+		height:100%;
+		width:120px;
+		box-shadow: 1px 1px 5px lighten(black,10);
+		span{
+			position: absolute;
+			bottom:20px;
+			right:10px;
+			text-shadow:1px 1px 5px lighten(black,10);
+		}
+	}
+	.introduction{
+		width:60%;
+		font-size: 1.6em;
+		display: inline-block;
+		padding:auto 10px;
+	}
+	.highlight{
+		float:right;
+		position: relative;
+	}
+	figure:hover,.lien:hover,img:hover,.blog .cadre:hover{
+		box-shadow: 0 0 5px black;
+		position: relative;
+		z-index:10;
+	}
+	.tile{
+		position: relative;
+		float:none;
+		display: inline-block;
+		img{
+			position: relative;
+		}
+	}
+	.image{
+		width:170px;
+		height:170px;
+		overflow: hidden;
+		background-color: $white;
+		img{
+			position: relative;
+			left:-50%;
+		}
+		
+	}
+	.imageL{
+		height:170px;
+		overflow:hidden;
+		background-color: $white;
+	}
+	.onglet{
+		position: absolute;
+		top:0;
+		right:0;
+		opacity:0;
+		color:white;
+		width:150px;
+		height:150px;
+		padding:10px;
+		background-color: transparentize($black,0.5);
+		overflow:hidden;
+		.title{
+			display: block;
+		}
+	}
+	.tile:hover .onglet{
+		transition:1s opacity;
+		opacity:1;
+	}
+	.blog{
+		clear: both;
+		.cadre{
+			display: inline-block;
+		}
+		.image{
+			display:inline-block;
+			vertical-align: bottom;
+		}
+	}
+	.lien{
+		display: inline-block;
+		margin-left: 0;
+	}
+	section:last-of-type{
+		margin-bottom: 50px;
+	}
+	footer{
+		visibility:inherit;
+		padding:10px;
+		position: fixed;
+		left:0;
+		bottom:0;
+		background-color: transparentize($black,0.5);
+		width:100%;
+	}
+}
