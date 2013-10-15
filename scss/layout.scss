@@ -104,11 +104,13 @@
   content:"\e803";
 }
 .cadre{
+	text-align: justify;
 	background-color: $white;
 	vertical-align: top;
-	max-width:320px;
+	max-width:310px;
+	max-height: 140px;
 	height:150px;
-	padding:10px;
+	padding:15px;
 	overflow: hidden;
 	span{
 		display: block;
@@ -147,6 +149,11 @@
 }
 #gplus:before{
 	content:"\e804"
+}
+.date{
+	text-transform: uppercase;
+	font-size: 0.85em;
+	color:grey;
 }
 @media (max-width: 680px) {
 	.lien,figcaption{
@@ -214,7 +221,8 @@
 		
 	}
 	.imageL{
-		height:170px;
+		width:340px;
+		max-height:170px;
 		overflow:hidden;
 		background-color: $white;
 	}
@@ -241,6 +249,9 @@
 		clear: both;
 		.cadre{
 			display: inline-block;
+			.title,.date{
+				text-align: right;
+			}
 		}
 		.image{
 			display:inline-block;
