@@ -22,3 +22,26 @@ $fontTitle : "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-
   font-style: normal;
 }
 
+@keyframes load_quicker {
+	0% {right:100%;}
+	80%{right:100%;}
+	100% {right:0;}
+}
+
+@keyframes load_quick {
+	0% {right:100%;}
+	60%{right:100%;}
+	100% {right:0;}
+}
+
+@keyframes load_slow {
+	0% {right:100%;}
+	40%{right:100%;}
+	100% {right:0;}
+}
+
+@keyframes load_slower {
+	0% {right:100%;}
+	20%{right:100%;}
+	100% {right:0;}
+}

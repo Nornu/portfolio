@@ -74,6 +74,8 @@
 	text-align: center;
 	color:white;
 	font-size: 1.3em;
+	position: relative;
+	
 	a{
 		display: block;
 		width:150px;
@@ -118,6 +120,7 @@
 }
 .highlight{
 	width:340px;
+	border:1px solid $green;
 }
 .black{
 	color:black;
@@ -205,13 +208,19 @@
 		position: relative;
 		float:none;
 		display: inline-block;
+		border:1px solid $green;
 		img{
 			position: relative;
 		}
 	}
+	.load_slower{position: relative;animation:load_slower 2s linear;}
+	.load_slow{position: relative;animation:load_slow 2s linear;}
+	.load_quick{position: relative;animation:load_quick 2s linear;}
+	.load_quicker{position: relative;animation:load_quicker 2s linear;}
+
 	.image{
-		width:170px;
-		height:170px;
+		width:168px;
+		height:168px;
 		overflow: hidden;
 		background-color: $white;
 		img{
@@ -222,7 +231,7 @@
 	}
 	.imageL{
 		width:340px;
-		max-height:170px;
+		max-height:168px;
 		overflow:hidden;
 		background-color: $white;
 	}
@@ -256,11 +265,15 @@
 		.image{
 			display:inline-block;
 			vertical-align: bottom;
+			width:170px;
+			height:170px;
 		}
 	}
 	.article{
 		display: inline-block;
 		vertical-align: bottom;
+		position: relative;
+		
 	}
 	.lien{
 		display: inline-block;

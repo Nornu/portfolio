@@ -6,3 +6,7 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 </head>
 <body>
+	<header class="title">
+		<h1>Le Portfolio de Julien Cheron</h1>
+		<a href="<?php echo get_site_url();?>"><span>Julien Cheron</span></a>
+	</header>
