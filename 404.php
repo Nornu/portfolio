@@ -1,3 +1,3 @@
 <?php get_header();?>
-page catégorie blog
+Page 404
 <?php get_footer(); ?>

@@ -1,5 +1,7 @@
-<?php 
+<?php
 get_header();
+//$test=get_posts('post_title=moi');
+//var_dump($test);
 $speed = 0;
 //$the_query = new WP_Query( array('post_type' => 'post') );
 ?>
@@ -10,6 +12,6 @@ $speed = 0;
 		get_template_part('moi');
 		?>
 <?php 
-var_dump($speed);
+
 get_footer(); 
 ?>

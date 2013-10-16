@@ -1,3 +1,3 @@
 <?php get_header();?>
-page catégorie blog
+Page page-Contact
 <?php get_footer(); ?>

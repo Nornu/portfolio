@@ -194,6 +194,7 @@
 		font-size: 1.6em;
 		display: inline-block;
 		padding:auto 10px;
+		animation:fondu 3s linear;
 	}
 	.highlight{
 		float:right;
@@ -213,10 +214,10 @@
 			position: relative;
 		}
 	}
-	.load_slower{position: relative;animation:load_slower 2s linear;}
-	.load_slow{position: relative;animation:load_slow 2s linear;}
-	.load_quick{position: relative;animation:load_quick 2s linear;}
-	.load_quicker{position: relative;animation:load_quicker 2s linear;}
+	.load_slower{position: relative;animation:load_slower 2s ease-in;}
+	.load_slow{position: relative;animation:load_slow 2s ease-in;}
+	.load_quick{position: relative;animation:load_quick 2s ease-in;}
+	.load_quicker{position: relative;animation:load_quicker 2s ease-in;}
 
 	.image{
 		width:168px;
@@ -274,6 +275,9 @@
 		vertical-align: bottom;
 		position: relative;
 		
+	}
+	.portrait{
+		width:170px;
 	}
 	.lien{
 		display: inline-block;

@@ -1,3 +1,3 @@
 <?php get_header();?>
-page catégorie blog
+Page page-moi
 <?php get_footer(); ?>
