@@ -1,14 +1,30 @@
-<?php global $speed; $the_query = new WP_Query( array('post_type' => 'creations') ); ?>
+<?php global $speed; $creations = new WP_Query( array('post_type' => 'creations') ); ?>
 <section class="gallery">
-		<?php if($the_query -> have_posts()): ?>
+		<?php if($creations -> have_posts()):
+		$posts = get_posts(array('post_type' => 'creations'));?>
 			<h2>Galerie du Portfolio</h2>
 			<?php get_template_part('highlight') ?>
-			<?php $id = 1; $speed = 'quick'; get_template_part('tile-large') ?><!--
+			<?php 
+				$tiles = $posts[1];
+				$stats = get_object_vars($tiles);
+				$id = $stats['ID'];
+				$speed = 'quick';
+				get_template_part('tile-large');
+			?><!--
 			--><div class="lien load_slower" id="portfolio">
 					<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
 				</div><!--
-			--><?php $id = 2; $speed = 'quicker';get_template_part('tile-normal');?><!--
-			--><?php $id = 3; $speed = 'slow';get_template_part('tile-large') ?><!--
-			--><?php $id = 4; $speed = 'quick';get_template_part('tile-normal') ?>
-		<?php endif; ?>
+			--><?php
+			for ($i=2; $i < count($posts); $i++) {
+				$tiles = $posts[$i];
+				$stats = get_object_vars($tiles);
+				$id = $stats['ID'];
+				if($i % 2 === 0){
+					$speed = 'slower';get_template_part('tile-normal');
+				}else{
+					$speed = 'quicker';get_template_part('tile-large');
+				}
+					
+			}?>
+		<?php endif; wp_reset_postdata(); ?>
 	</section>

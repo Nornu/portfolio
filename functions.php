@@ -10,6 +10,7 @@ add_action('after_setup_theme','portfolio_setup');
 add_action( 'init', 'create_post_type' );
 add_theme_support( 'post-thumbnails', array('creations','post') );
 
+
 //sidebar
 function portfolio_widget_init(){
 	register_sidebar( array(

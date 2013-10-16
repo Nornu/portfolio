@@ -17,7 +17,7 @@ $the_query = new WP_Query( array('post_type' => 'post') );
 					<?php echo $last_post[0]['post_content']?>
 				</div><!--
 			--></a><!--
-	--><?php wp_reset_postdata(); endif;?><!--
+	--><?php endif; wp_reset_postdata(); ?><!--
 	--><div class="lien load_slow" id="blog">
 		<a href="<?php echo get_category_link(get_cat_ID( 'Blog' )); ?>">Blog</a>
 	</div>

@@ -1,7 +1,7 @@
-<?php global $speed; $recent_posts = wp_get_recent_posts(array('numberposts' => '5', 'post_type'=>'creations'));?>
-<a href="<?php echo get_permalink( $recent_posts[$id]['ID'] )?>" class="black"><figure class="tile load_<?php echo $speed ?>">
-	<div class="image"><?php echo get_the_post_thumbnail($recent_posts[$id]['ID']) ?></div> 
+<?php global $speed,$id; $recent_post = get_post($id, ARRAY_A);?>
+<a href="<?php echo get_permalink( $id )?>" class="black"><figure class="tile load_<?php echo $speed ?>">
+	<div class="image"><?php echo get_the_post_thumbnail($id) ?></div> 
 	<figcaption class="onglet">
-		<span class="title"><?php echo $recent_posts[$id]['post_title'] ?></span> <?php echo $recent_posts[$id]['post_excerpt']; var_dump($speed) ?>
+		<span class="title"><?php echo $recent_post['post_title'] ?></span> <?php echo $recent_post['post_excerpt'];?>
 	</figcaption>
 </figure></a>
