@@ -19,10 +19,12 @@
 				$tiles = $posts[$i];
 				$stats = get_object_vars($tiles);
 				$id = $stats['ID'];
+				$sSpeed = array('slower','slow','quick','quicker');
+				$rand_key = array_rand($sSpeed,1);
 				if($i % 2 === 0){
-					$speed = 'slower';get_template_part('tile-normal');
+					$speed = $sSpeed[$rand_key];get_template_part('tile-normal');
 				}else{
-					$speed = 'quicker';get_template_part('tile-large');
+					$speed = $sSpeed[$rand_key];get_template_part('tile-large');
 				}
 					
 			}?>
