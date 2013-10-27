@@ -3,6 +3,7 @@ get_header();
 //$test=get_posts('post_title=moi');
 //var_dump($test);
 $speed = 0;
+$class = false;
 //$the_query = new WP_Query( array('post_type' => 'post') );
 ?>
 	<?php 
