@@ -1,4 +1,4 @@
-<section class="Intro">
+<section class="intro">
 	<h2>Mot d'introduction et Contact</h2>
 	<div class="introduction">
 		<p><strong>Bien le bonjour!</strong> Je m'appelle Julien, je fais des sites internet et des applications mobiles pour vous.</p>

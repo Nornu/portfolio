@@ -20,6 +20,9 @@
         font-size: 2.25em;
         background-color: $green;
         text-align: right;
+        text-shadow:1px 1px 5px lighten(black,10);
+        box-shadow: 1px 1px 5px lighten(black,10);
+        padding:5/(16*2.25)*1em;
         span:before{
             content:"";
             display: inline-block;
@@ -54,20 +57,6 @@
     }
 
 //Les classes
-    .title{
-        font-family: $fontTitle;
-    }
-    .introduction{
-        font-size: 1.5em;
-        color:white;
-        text-align: right;
-        text-shadow: 1px 1px 5px lighten(black,10);
-        margin:5/(16*1.5)*1em;
-        strong{
-            font-size: 1.5em;
-            display:block;
-        }
-    }
     .lien{
         background-color: $green;
         text-align: center;
@@ -81,58 +70,153 @@
             text-align: center;
         }
     }
-    figure{
-        margin: 5/(16)*1em;
-    }
-    .cadre,.onglet{
-        background-color: $white;
-        overflow:hidden;
-        color:black;
-    }
-    .imageL,.image{
-        background-color: $white;
-        height:170/(16)*1em;
-        overflow:hidden;
-        img{
-            width:100%;
-            height:auto;
+    //Introduction
+        .title{
+            font-family: $fontTitle;
         }
-    }
-
-    .socials{
-        margin:0 10/(16)*1em;
-        display: inline;
-    }
-    .socials span{
-        display: inline-block;
-        text-indent: -9999px;
-        margin:0 10/(16)*1em 0 -10/(16)*1em;
-    }
-    .socials:before{
-        text-align: center;
-        font-family: "fontello";
-        content: "";
-    }
+        .introduction{
+            font-size: 1.5em;
+            color:white;
+            text-align: right;
+            text-shadow: 1px 1px 5px lighten(black,10);
+            margin:5/(16*1.5)*1em;
+            strong{
+                font-size: 1.5em;
+                display:block;
+            }
+        }
+    //Galerie
+        .highlight{
+            position: relative;
+        }
+        figure{
+            margin: 5/(16)*1em;
+        }
+        .cadre,.onglet{
+            background-color: $white;
+            overflow:hidden;
+            color:black;
+        }
+        .tile{
+            position: relative;
+        }
+        .onglet, .highlight .cadre{
+            position: absolute;
+            top:0;
+            right:0;
+            z-index:3;
+            color:white;
+            width:33%;
+            height:150/(16)*1em;
+            padding:10/(16)*1em;
+            background-color: transparentize($black,0.3);
+            overflow:hidden;
+            .title{
+                display: block;
+            }
+        }
+        .imageL,.image{
+            background-color: $white;
+            height:170/(16)*1em;
+            overflow:hidden;
+            img{
+                width:100%;
+                height:auto;
+            }
+        }
+    //Blog
+        .blog .cadre{
+            margin:5/(16)*1em;
+            min-height: 100/(16)*1em;
+            padding:20/(16)*1em;
+            span{
+                display: block;
+                text-align: right;
+            }
+            .date{
+                margin-bottom:10/(16)*1em;
+            }
+        }
+        .date{
+            text-transform: uppercase;
+            font-size: 0.85em;
+            color:grey;
+        }
+    //Moi
+        .portrait{
+            width:50%;
+            margin:5/(16)*1em auto;
+            display:block;
+        }
+    //Footer
+        .socials{
+            margin:0 10/(16)*1em;
+            display: inline;
+        }
+        .socials span{
+            display: inline-block;
+            text-indent: -9999px;
+            margin:0 10/(16)*1em 0 -10/(16)*1em;
+        }
+        .socials:before{
+            text-align: center;
+            font-family: "fontello";
+            content: "";
+        }
 
 //Les Comportements
     figure:hover,.lien:hover,.article:hover{
         box-shadow: 0 0 5px black;
         position: relative;
-        z-index:10;
+        //z-index:2;
     }
 
 @media screen and (max-device-width:680px) {
     html{
-        font-size: 1.5em;
+        font-size: 2.25em;
     }
     .lien{
         padding:1em;
     }
-    .image,.imageL{
-
-    }
     footer{
-        font-size: 2em;
+        font-size: 1.5em;
+        z-index:9999;
     }
-    
+    @media (orientation:portrait){
+        header{
+            position: fixed;
+            width:100%;
+            top:0;
+            right:0;
+            z-index:9999;
+        }
+        .intro{
+            margin-top: 91*3/(16*2.25)*1em;
+        }
+        section:last-of-type{
+            margin-bottom: 100/16*1em;
+        }    
+    }
+    @media (orientation:landscape){
+        body{
+            margin-right: 215/(16*2.25)*1em
+        }
+        header{
+            position: fixed;
+            font-size: 1.5em;
+            width:200/(16*2.25*1.5)*1em;
+            height:100%;
+            right:0;
+            bottom:0;
+            a{
+                margin-top: 80%;
+            }
+        }
+        footer{
+            position: static;
+        }
+        section:last-of-type{
+            margin-bottom: 5/16*1em;
+        }    
+    }
 }

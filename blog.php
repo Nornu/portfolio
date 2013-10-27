@@ -2,6 +2,9 @@
 $the_query = new WP_Query( array('post_type' => 'post') );
 ?>
 <section class="blog">
+	<div class="lien load_slow" id="blog">
+		<a href="<?php echo get_category_link(get_cat_ID( 'Blog' )); ?>">Blog</a>
+	</div>
 	<?php if($the_query ->have_posts()):?>
 		<?php $last_post = wp_get_recent_posts(array('numberposts' => '1'));?>
 			<h2>Dernier Post de mon blog</h2>
@@ -17,8 +20,5 @@ $the_query = new WP_Query( array('post_type' => 'post') );
 					<?php echo $last_post[0]['post_content']?>
 				</div><!--
 			--></a><!--
-	--><?php endif; wp_reset_postdata(); ?><!--
-	--><div class="lien load_slow" id="blog">
-		<a href="<?php echo get_category_link(get_cat_ID( 'Blog' )); ?>">Blog</a>
-	</div>
+	--><?php endif; wp_reset_postdata(); ?>
 </section>
