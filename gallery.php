@@ -3,6 +3,9 @@
 		<?php if($creations -> have_posts()):
 		$posts = get_posts(array('post_type' => 'creations'));?>
 			<h2>Galerie du Portfolio</h2>
+			<div class="lien load_slower" id="portfolio">
+					<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
+			</div>
 			<?php get_template_part('highlight') ?>
 			<?php 
 				$tiles = $posts[1];
@@ -11,9 +14,6 @@
 				$speed = 'quick';
 				get_template_part('tile-large');
 			?><!--
-			--><div class="lien load_slower" id="portfolio">
-					<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
-				</div><!--
 			--><?php
 			for ($i=2; $i < count($posts); $i++) {
 				$tiles = $posts[$i];

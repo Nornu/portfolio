@@ -21,6 +21,39 @@ $fontTitle : "Century Gothic", "Tw Cen MT", Futura, "URW Gothic L", Arial, sans-
   font-weight: normal;
   font-style: normal;
 }
+
+//Icons
+
+#portfolio a:before{
+  content:"\e801";
+}
+#contact a:before{
+  content:"\e800";
+}
+#blog a:before{
+  content:"\e802";
+}
+#moi a:before{
+  content:"\e803";
+}
+#fb:before{
+    content:"\e809"
+}
+#tw:before{
+    content:"\e807"
+}
+#in:before{
+    content:"\e805"
+}
+#git:before{
+    content:"\e808"
+}
+#gplus:before{
+    content:"\e804"
+}
+
+//Animations
+
 @keyframes fondu{
 	0%{opacity:0}
 	70%{opacity:0}
