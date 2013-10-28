@@ -235,7 +235,7 @@
     } //une colonne
 }
 
-@media (min-width:681px) /*and (max-width: 930px)*/,(min-device-width:681px) /*and (max-device-width: 930px)*/{ // 2*340 colonnes
+@media (min-width:681px) and (max-width: 930px),(min-device-width:681px) and (max-device-width: 930px){ // 2*340 colonnes
     body{
         width:680/(16)*1em;
     }
