@@ -1,12 +1,12 @@
 <?php global $speed,$class; $creations = new WP_Query( array('post_type' => 'creations') ); ?>
-<section class="gallery">
-		<?php if($creations -> have_posts()):
-		$posts = get_posts(array('post_type' => 'creations','numberposts'=>'6'));?>
-			<h2>Galerie du Portfolio</h2>
-			<div class="lien load_slower" id="portfolio">
+<section class="gallery"><!--
+		--><?php if($creations -> have_posts()):
+		$posts = get_posts(array('post_type' => 'creations','numberposts'=>'6'));?><!--
+			--><h2>Galerie du Portfolio</h2><!--
+			--><div class="lien load_slower" id="portfolio">
 					<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
-			</div>
-			<?php get_template_part('highlight') ?>
+			</div><!--
+			--><?php get_template_part('highlight') ?>
 			<?php 
 			for ($i=1; $i < 4; $i++) {
 				$tiles = $posts[$i];
