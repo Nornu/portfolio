@@ -127,10 +127,11 @@
     //Blog
         .blog .cadre{
             margin:5/(16)*1em;
-            min-height: 110/(16)*1em;
+            min-height: 130/(16)*1em;
             max-height: 290/(16)*1em;
             padding:20/(16)*1em;
             position: relative;
+            padding-bottom: 44/(16)*1em;
             span{
                 display: block;
                 text-align: right;
@@ -235,8 +236,285 @@
         }    
     } //une colonne
 }
-
-@media (min-width:681px) and (max-width: 930px){ // 2*340 colonnes
+@media (min-width:681px) and (max-width: 1080px){ // 2*340 colonnes
+    body{
+        width:680/(16)*1em;
+    }
+    header{
+        position: fixed;
+        width:100%;
+        top:0;
+        right:0;
+        z-index: 9999;
+    }
+    .introduction{
+        vertical-align: bottom;
+    }
+    .lien{
+        width:160/(16*1.5)*1em;
+        height:160/(16*1.5)*1em;
+        margin:5/(16*1.5)*1em;
+        a:before{
+            font-size: 2.25em;
+            display: block;
+            padding-top: 0.444em;
+        }
+    }
+    //Intro
+        .introduction{
+            margin-top: 86/(16)*1em;
+            width:500/(16*1.5)*1em;
+            height:160/(16*1.5)*1em;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        #contact{
+            display: inline-block;
+        }
+    //Galerie
+        .gallery{
+            text-align: right;
+        }
+        #portfolio{
+            display: inline-block;
+        }
+        .highlight{
+            .imageL{
+                height:165/(16)*1em;
+            }
+            .cadre{
+                background-color: $white;
+                position: static;
+                height:145/(16)*1em;
+                width:auto;
+                color:black;
+            }
+        }
+        .black{
+            display: inline-block;
+            vertical-align: bottom;
+            width:170/(16)*1em;
+            float:left;
+            img{
+                width:auto;
+            }
+        }
+        .clear{
+            float:right;
+            width:340/(16)*1em;
+        }
+        .medium{
+            width:340/(16)*1em;
+            float: none;
+            
+        }
+        .onglet{
+            width:140/(16)*1em;
+            z-index: -1;
+        }
+        .gallery:after{
+            content:'.';
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+    //Blog
+        .blog .lien{
+            display:inline-block;
+        }
+        a.article{
+            vertical-align: top;
+            float:none;
+            display: inline-block;
+            width:340/(16)*1em;
+            max-height: 340/(16)*1em;
+            .image{
+                margin:5px 5px 0 5px;
+                height:140/(16)*1em;
+            }
+        }
+        .image+div.cadre{
+            margin-top:0;
+            height:106/(16)*1em;
+            min-height: inherit;
+        }
+        .blog:after{
+            content:'.';
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+        .page_blog{
+            width:50%;
+            margin:0 auto;
+        }
+    //Moi
+        .moi{
+            text-align: center;
+            .contenu{
+                width:50%;
+                margin:auto;
+            }
+            .lien,img{
+                display: inline-block;
+            }
+            img{
+                width:160/(16)*1em;
+                margin:5/(16)*1em;
+            }
+        }
+    //Menu
+        .menu .lien{
+            float:none;
+            display : inline-block;
+        }
+    //Comportement
+        .black:hover .onglet{
+            z-index: 10;
+        }
+}
+@media (min-width: 1081px) and (max-width: 1419px){
+    body{
+        width:680/(16)*1em;
+    }
+    header{
+        position: fixed;
+        width:200px;
+        top:0;
+        right:0;
+        z-index: 9999;
+    }
+    .introduction{
+        vertical-align: bottom;
+    }
+    .lien{
+        width:160/(16*1.5)*1em;
+        height:160/(16*1.5)*1em;
+        margin:5/(16*1.5)*1em;
+        a:before{
+            font-size: 2.25em;
+            display: block;
+            padding-top: 0.444em;
+        }
+    }
+    //Intro
+        .introduction{
+            margin-top: 86/(16)*1em;
+            width:500/(16*1.5)*1em;
+            height:160/(16*1.5)*1em;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        #contact{
+            display: inline-block;
+        }
+    //Galerie
+        .gallery{
+            text-align: right;
+        }
+        #portfolio{
+            display: inline-block;
+        }
+        .highlight{
+            .imageL{
+                height:165/(16)*1em;
+            }
+            .cadre{
+                background-color: $white;
+                position: static;
+                height:145/(16)*1em;
+                width:auto;
+                color:black;
+            }
+        }
+        .black{
+            display: inline-block;
+            vertical-align: bottom;
+            width:170/(16)*1em;
+            float:left;
+            img{
+                width:auto;
+            }
+        }
+        .clear{
+            float:right;
+            width:340/(16)*1em;
+        }
+        .medium{
+            width:340/(16)*1em;
+            float: none;
+            
+        }
+        .onglet{
+            width:140/(16)*1em;
+            z-index: -1;
+        }
+        .gallery:after{
+            content:'.';
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+    //Blog
+        .blog .lien{
+            display:inline-block;
+        }
+        a.article{
+            vertical-align: top;
+            float:none;
+            display: inline-block;
+            width:340/(16)*1em;
+            max-height: 340/(16)*1em;
+            .image{
+                margin:5px 5px 0 5px;
+                height:140/(16)*1em;
+            }
+        }
+        .image+div.cadre{
+            margin-top:0;
+            height:106/(16)*1em;
+            min-height: inherit;
+        }
+        .blog:after{
+            content:'.';
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+        }
+        .page_blog{
+            width:50%;
+            margin:0 auto;
+        }
+    //Moi
+        .moi{
+            text-align: center;
+            .contenu{
+                width:50%;
+                margin:auto;
+            }
+            .lien,img{
+                display: inline-block;
+            }
+            img{
+                width:160/(16)*1em;
+                margin:5/(16)*1em;
+            }
+        }
+    //Menu
+        .menu .lien{
+            float:none;
+            display : inline-block;
+        }
+    //Comportement
+        .black:hover .onglet{
+            z-index: 10;
+        }    
+}
+@media (min-width:1420px) and (max-width: 1900px){ //3*340 colonnes + header à droite
     body{
         width:680/(16)*1em;
     }
@@ -352,239 +630,7 @@
             z-index: 10;
         }
 }
-@media (min-width: 931px) and (max-width: 1419px){ //2*340 colonnes + header à droite
-    body{
-        width:680/(16)*1em;
-    }
-    header{
-        position: fixed;
-        width:100%;
-        top:0;
-        right:0;
-        z-index: 9999;
-    }
-    .lien{
-        width:160/(16*1.5)*1em;
-        height:160/(16*1.5)*1em;
-        margin:5/(16*1.5)*1em;
-        a:before{
-            font-size: 2.25em;
-            display: block;
-            padding-top: 0.444em;
-        }
-    }
-    //Intro
-        .introduction{
-            margin-top: 86/(16)*1em;
-            width:500/(16*1.5)*1em;
-            height:160/(16*1.5)*1em;
-            display: inline-block;
-            vertical-align: bottom;
-        }
-        #contact{
-            display: inline-block;
-        }
-    //Galerie
-        .gallery{
-            text-align: right;
-        }
-        #portfolio{
-            display: inline-block;
-            float:left;
-        }
-        .highlight{
-            .imageL{
-                height:165/(16)*1em;
-            }
-            .cadre{
-                background-color: $white;
-                position: static;
-                height:145/(16)*1em;
-                width:auto;
-                color:black;
-            }
-        }
-        .black{
-            display: inline-block;
-            vertical-align: bottom;
-            width:170/(16)*1em;
-            float:left;
-            img{
-                width:auto;
-            }
-        }
-        .clear{
-            float:right;
-            width:340/(16)*1em;
-        }
-        .medium{
-            width:340/(16)*1em;
-            float: none;
-            
-        }
-        .onglet{
-            width:140/(16)*1em;
-            z-index: -1;
-        }
-        .gallery:after{
-            content:'.';
-            clear: both;
-            display: block;
-            visibility: hidden;
-            height: 0;
-        }
-    //Blog
-        .blog .lien{
-            display:inline-block;
-            vertical-align: top;
-        }
-        a.article{
-            display: inline-block;
-            width:340/(16)*1em;
-            float: none;
-            .cadre{
-                min-height: 340/(16)*1em;
-            }
-        }
-    //Moi
-        .moi{
-            width:50%;
-            margin:auto;
-            .lien,img{
-                display: inline-block;
-            }
-            img{
-                width:160/(16)*1em;
-                margin:5/(16)*1em;
-            }
-        }
-    //Menu
-        .menu .lien{
-            float:none;
-            display : inline-block;
-        }
-    //Comportement
-        .black:hover .onglet{
-            z-index: 10;
-        }
-}
-@media (min-width:1420px) and (max-width: 1900px){ //3*340 colonnes
-    body{
-        width:680/(16)*1em;
-    }
-    header{
-        position: fixed;
-        width:100%;
-        top:0;
-        right:0;
-        z-index: 9999;
-    }
-    .lien{
-        width:160/(16*1.5)*1em;
-        height:160/(16*1.5)*1em;
-        margin:5/(16*1.5)*1em;
-        a:before{
-            font-size: 2.25em;
-            display: block;
-            padding-top: 0.444em;
-        }
-    }
-    //Intro
-        .introduction{
-            margin-top: 86/(16)*1em;
-            width:500/(16*1.5)*1em;
-            height:160/(16*1.5)*1em;
-            display: inline-block;
-            vertical-align: bottom;
-        }
-        #contact{
-            display: inline-block;
-        }
-    //Galerie
-        .gallery{
-            text-align: right;
-        }
-        #portfolio{
-            display: inline-block;
-            float:left;
-        }
-        .highlight{
-            .imageL{
-                height:165/(16)*1em;
-            }
-            .cadre{
-                background-color: $white;
-                position: static;
-                height:145/(16)*1em;
-                width:auto;
-                color:black;
-            }
-        }
-        .black{
-            display: inline-block;
-            vertical-align: bottom;
-            width:170/(16)*1em;
-            float:left;
-            img{
-                width:auto;
-            }
-        }
-        .clear{
-            float:right;
-            width:340/(16)*1em;
-        }
-        .medium{
-            width:340/(16)*1em;
-            float: none;
-            
-        }
-        .onglet{
-            width:140/(16)*1em;
-            z-index: -1;
-        }
-        .gallery:after{
-            content:'.';
-            clear: both;
-            display: block;
-            visibility: hidden;
-            height: 0;
-        }
-    //Blog
-        .blog .lien{
-            display:inline-block;
-            vertical-align: top;
-        }
-        a.article{
-            display: inline-block;
-            width:340/(16)*1em;
-            float: none;
-            .cadre{
-                min-height: 340/(16)*1em;
-            }
-        }
-    //Moi
-        .moi{
-            width:50%;
-            margin:auto;
-            .lien,img{
-                display: inline-block;
-            }
-            img{
-                width:160/(16)*1em;
-                margin:5/(16)*1em;
-            }
-        }
-    //Menu
-        .menu .lien{
-            float:none;
-            display : inline-block;
-        }
-    //Comportement
-        .black:hover .onglet{
-            z-index: 10;
-        }
-}
-@media (min-width:1901px){ //4*340 colonnes
+@media (min-width:1901px){ //4*340 colonnes + header à droite
     body{
         width:680/(16)*1em;
     }

@@ -2,8 +2,8 @@
 <html lang="<?php bloginfo( 'language' ) ?>">
 <head>
 	<meta charset="<?php bloginfo('charset')?>">
-	<title><?php bloginfo('name') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php bloginfo('name') ?></title>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <script type="text/javascript" src="http://jcheron.be/cours/Projet_Web/p3_portfolio/wordpress/wp-content/themes/portfolio/js/modernizr.js"></script>
 </head>

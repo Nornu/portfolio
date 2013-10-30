@@ -1,21 +1,22 @@
 <?php
+global $location;
 $sSpeed = array('slower','slow','quick','quicker');
+$menu = array('portfolio', 'blog', 'moi', 'contact');
 ?>
 <section class="menu">
 	<h2>Menu de Navigation</h2>
-	<div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="portfolio">
-		<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
-	</div><div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="blog">
-		<a href="<?php echo get_category_link(get_cat_ID( 'Blog' )); ?>">Blog</a>
-	</div><div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="moi">
+	<?php for ($i=0; $i < count($menu)-2; $i++):?>
+		<?php if($location!==$menu[$i]): ?><!--
+		--><div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="<?php echo($menu[$i]);?>"><a href="<?php if($menu[$i]=='portfolio'){echo get_post_type_archive_link( 'creations' );}else{echo get_category_link(get_cat_ID( 'Blog' ));};?>"><?php echo(ucfirst($menu[$i])); ?></a></div><!--
+	--><?php 
+		endif;
+		endfor;
+		for ($i=2; $i < count($menu); $i++):
+			if($location!==$menu[$i]):?><!--
+		--><div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="<?php echo($menu[$i]);?>">
 		<a href="<?php 
-		$page = get_page_by_title( 'Moi' );
+		$page = get_page_by_title( $menu[$i] );
 		$pageID = $page->ID;
-		echo get_page_link( $pageID ); ?>">Moi</a>
-	</div><div class="lien load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" id="contact">
-		<a href="<?php 
-		$page = get_page_by_title( 'Contact' );
-		$pageID = $page->ID;
-		echo get_page_link( $pageID ); ?>">Contact</a>
-	</div>
+		echo get_page_link( $pageID ); ?>"><?php echo(ucfirst($menu[$i])); ?></a></div><!--
+	--><?php endif;endfor;?>
 </section>

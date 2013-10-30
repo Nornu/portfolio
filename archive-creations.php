@@ -4,7 +4,10 @@
 	<h2>La page avec toutes les créations de Julien Cheron</h2>
 	<div class="introduction">
 		<p><strong>Mes créations</strong> Sur cette page vous retrouvez toutes mes créations concernant le web.</p>
-	</div>
+	</div><!--
+--><div class="lien load_slower" id="portfolio">
+					<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
+			</div>
 	<div>
 		<?php 
 			if($creations -> have_posts()):
@@ -30,7 +33,8 @@
 	
 	<?php endif; ?>
 </section>
-<?php 
+<?php
+$location='portfolio';
 get_template_part('menu');
 //var_dump($posts);
 get_footer();

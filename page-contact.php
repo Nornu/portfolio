@@ -4,6 +4,12 @@
 	<h2>Contacter Julien Cheron</h2>
 	<div class="introduction">
 		<p><strong>Me Contacter</strong> N'hésitez pas à remplir le formulaire pour me contacter.</p>
+	</div><!--
+	--><div class="lien load_quicker" id="contact">
+		<a href="<?php
+		$page = get_page_by_title( 'Contact' );
+		$pageID = $page->ID;
+		echo get_page_link( $pageID ); ?>">Contact</a>
 	</div>
 	<div class="contenu blog">
 		<div class="cadre cadre_moi load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>">
@@ -24,6 +30,7 @@
 	</div>
 </section>
 <?php endwhile;endif;
+$location='contact';
 //var_dump($customFields);
 get_template_part('menu');
 get_footer(); ?>

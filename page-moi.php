@@ -3,7 +3,13 @@
 <section class="moi">
 	<h2>A mon propos</h2>
 	<div class="introduction">
-		<p><strong>A mon propos</strong> Quelques informations me concernant.</p>
+		<p><strong>A mon propos</strong> Des trucs que je fais, que je sais faire et des trucs tout court.</p>
+	</div><!--
+	--><div class="lien load_quicker" id="moi">
+		<a href="<?php 
+		$page = get_page_by_title( 'Moi' );
+		$pageID = $page->ID;
+		echo get_page_link( $pageID ); ?>">Moi</a>
 	</div>
 	<img class="portrait load_quick" src="<?php
 	$test=get_posts(array('post_title' => 'moi', 'post_type' => 'attachment'));
@@ -16,8 +22,7 @@
 			<span class="date">modifié le <?php the_modified_date();?></span>
 			<?php the_content()?>
 		</div><!--
-	--><br>
-		<div class="cadre load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>">
+	--><div class="cadre load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>">
 			<span class="date"></span>
 			<?php
 				$customFields = get_post_custom();
@@ -32,6 +37,7 @@
 	</div>
 </section>
 <?php endwhile;endif;
+$location = 'moi';
 //var_dump($customFields);
 get_template_part('menu');
 get_footer(); ?>
