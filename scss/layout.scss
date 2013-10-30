@@ -182,14 +182,15 @@
         //z-index:2;
     }
 
-@media (max-device-width:680px) {
+@media (max-width: 680px){
     html{
-        font-size: 2.25em;
+        font-size: 0.8em;
     }
     .lien{
         padding:1em;
     }
     footer{
+        position: static;
         font-size: 1.5em;
         z-index:9999;
     }
@@ -235,7 +236,7 @@
     } //une colonne
 }
 
-@media (min-device-width:681px) and (max-device-width: 930px){ // 2*340 colonnes
+@media (min-width:681px) and (max-width: 930px){ // 2*340 colonnes
     body{
         width:680/(16)*1em;
     }
@@ -351,7 +352,7 @@
             z-index: 10;
         }
 }
-@media (min-device-width: 931px) and (max-device-width: 1419px){ //2*340 colonnes + header à droite
+@media (min-width: 931px) and (max-width: 1419px){ //2*340 colonnes + header à droite
     body{
         width:680/(16)*1em;
     }
@@ -467,7 +468,7 @@
             z-index: 10;
         }
 }
-@media (min-device-width:1420px) and (max-device-width: 1900px){ //3*340 colonnes
+@media (min-width:1420px) and (max-width: 1900px){ //3*340 colonnes
     body{
         width:680/(16)*1em;
     }
@@ -583,7 +584,7 @@
             z-index: 10;
         }
 }
-@media (min-device-width:1901px){ //4*340 colonnes
+@media (min-width:1901px){ //4*340 colonnes
     body{
         width:680/(16)*1em;
     }
