@@ -9,17 +9,16 @@
 				<a href="<?php echo get_post_type_archive_link( 'creations' );?>">Portfolio</a>
 			</div>
 			<div class="page_blog">			
-				<a class="black article load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>" href=" <?php the_permalink() ?> " title="cliquez sur l'article pour lire la suite de <?php the_title()?>">
+				<div class="black article load_<?php $rand_key = array_rand($sSpeed,1); $speed = $sSpeed[$rand_key]; echo $speed ?>">
 					<?php if (has_post_thumbnail()) :?>
 						<div class="fullscreen">
 							<?php echo get_the_post_thumbnail(get_the_ID(),array(670,363))?>
 						</div><!--
 					--><?php endif;?><!--
-					--><div class="cadre cadre_moi">
-						<?php the_excerpt();
-						the_content();?>
+					--><div class="cadre cadre_moi full_height">
+						<?php the_content();?>
 					</div><!--
-				--></a>
+				--></div>
 			</div>
 <?php endwhile;endif; ?>
 </section>
